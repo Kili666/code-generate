@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>common</module>
+        <module>gendemo</module>
+        <module>codegen</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.lqjai.cropscan</groupId>
+    <artifactId>CodeGenDemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <tjxt.version>1.0</tjxt.version>
+        <org.projectlombok.version>1.18.30</org.projectlombok.version>
+        <spring-cloud.version>2021.0.3</spring-cloud.version>
+        <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
+        <mybatis-plus.version>3.5.0</mybatis-plus.version>
+        <hutool.version>5.7.17</hutool.version>
+        <swagger.version>3.0.3</swagger.version>
+        <mysql.version>8.0.23</mysql.version>
+        <oracle.version>11.2.0.4</oracle.version>
+        <ali.sdk.core.version>4.6.0</ali.sdk.core.version>
+        <ali.sdk.kms.version>2.10.1</ali.sdk.kms.version>
+        <ali.sdk.oss.version>3.10.2</ali.sdk.oss.version>
+        <ali.sdk.pay.version>4.33.12.ALL</ali.sdk.pay.version>
+        <tencent.cloud.version>3.1.515</tencent.cloud.version>
+        <redisson.version>3.13.6</redisson.version>
+        <elasticsearch.version>7.12.1</elasticsearch.version>
+        <tencent.sdk.cos.version>5.6.89</tencent.sdk.cos.version>
+        <tencent.sdk.vod.version>2.1.5</tencent.sdk.vod.version>
+        <xxl-job-version>2.3.1</xxl-job-version>
+        <seata-version>1.5.1</seata-version>
+        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+    </properties>
+
+    <dependencies>
+        <!--驱动包-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+        <!--MySQL数据库驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>${oracle.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,53 @@
+# utils工具类，包含R, PageResult和PageQuery等类
+utilsPackage: com.lqjai.common.utils
+# 与数据库表关联的POJO类
+pojoPackage: com.lqjai.cropscan.pojo
+# 接收前端传递参数的DTO
+dtoPackage: com.lqjai.cropscan.model.dto
+# 返回给前端的BO
+boPackage: com.lqjai.cropscan.model.bo
+# MyBatis-Plus Mapper
+mapperPackage: com.lqjai.cropscan.mapper
+# MyBatis-Plus xml文件
+mapperXmlPackage: com.lqjai.cropscan.xml
+# 业务层service及其实现类
+serviceInterfacePackage: com.lqjai.cropscan.service
+serviceInterfaceImplPackage: com.lqjai.cropscan.service.impl
+# Controller
+controllerPackage: com.lqjai.cropscan.controller
+# Dubbo微服务Rpc及其实现类
+rpcInterfacePackage: com.lqjai.cropscan.rpc
+rpcInterfaceImplPackage: com.lqjai.cropscan.rpc.impl
+# SpringCloud微服务Feign
+feignPackage: com.lqjai.cropscan.feign
+# DTO,BO和POJO相互转化工具类
+convertPackage: com.lqjai.cropscan.convert
+# 启用Swagger接口文档
+enableSwagger: true
+# swagger-ui的路径
+swaggeruipath: com.lqjai.cropscan.swagger
+# 单体架构或微服务名称
+serviceName: cropscan
+
+# 文档注释作者名称
+author: Kili
+# MyBatisPlus逻辑删除字段, 默认为空， 设置例子：tableLogic= ， tableLogic=deleted(对应数据库字段)
+tableLogic:
+
+# MySQL数据库连接配置
+url: jdbc:mysql://127.224.164.169:3306/cropscan?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+uname: mysql
+pwd: 123456
+driver: com.mysql.cj.jdbc.Driver
+
+# PostgreSQL数据库连接配置
+#url: jdbc:postgresql://192.168.1.13:5432/cropscan?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#uname: postgres
+#pwd: 123456
+#driver: org.postgresql.Driver
+
+# Oracle数据库连接配置
+#url: jdbc:oracle:thin:@192.168.50.128:1521:helowin
+#uname: oracle
+#pwd: 123456
+#driver: oracle.jdbc.driver.OracleDriver
