@@ -1,7 +1,7 @@
 package ${package_rpc};
 
 import ${package_pojo}.${Table};
-import ${package_bo}.${Table}BO;
+import ${package_vo}.${Table}VO;
 import ${package_dto}.${Table}AddDTO;
 import ${package_dto}.${Table}UpdateDTO;
 import ${package_dto}.${Table}QueryDTO;
@@ -65,6 +65,6 @@ public interface ${Table}Rpc{
      * @param id
      * @return
      */
-    public ${Table}BO findById(${keyType} id);
+    public ${Table}VO findById(${keyType} id);
 
 }

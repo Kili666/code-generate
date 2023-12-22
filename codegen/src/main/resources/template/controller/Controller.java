@@ -5,7 +5,7 @@ import ${package_utils}.PageResult;
 import ${package_utils}.R;
 import ${package_utils}.StatusCode;
 import ${package_convert}.${Table}Convert;
-import ${package_bo}.${Table}BO;
+import ${package_vo}.${Table}VO;
 import ${package_dto}.${Table}AddDTO;
 import ${package_dto}.${Table}QueryDTO;
 import ${package_dto}.${Table}UpdateDTO;
@@ -139,7 +139,7 @@ public class ${Table}Controller {
     @ApiImplicitParam(paramType = "path", name = "id", value = "主键ID", required = true, dataType = "${keyType}")
     </#if>
     @GetMapping("/{id}")
-    public R<${Table}BO> findById(@PathVariable ${keyType} id){
+    public R<${Table}VO> findById(@PathVariable ${keyType} id){
         return R.ok(${table}Service.findById(id));
     }
 

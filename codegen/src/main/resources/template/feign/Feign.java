@@ -3,7 +3,7 @@ package ${package_feign};
 import ${package_utils}.PageResult;
 import ${package_utils}.R;
 import ${package_pojo}.${Table};
-import ${package_bo}.${Table}BO;
+import ${package_vo}.${Table}VO;
 import ${package_dto}.${Table}AddDTO;
 import ${package_dto}.${Table}QueryDTO;
 import ${package_dto}.${Table}UpdateDTO;
@@ -67,6 +67,6 @@ public interface ${Table}Feign {
      * @return
      */
     @GetMapping("/{id}")
-    R<${Table}BO> findById(@PathVariable ${keyType} id);
+    R<${Table}VO> findById(@PathVariable ${keyType} id);
 
 }

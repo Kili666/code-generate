@@ -2,7 +2,7 @@ package ${package_rpc_impl};
 
 import ${package_mapper}.${Table}Mapper;
 import ${package_pojo}.${Table};
-import ${package_bo}.${Table}BO;
+import ${package_vo}.${Table}VO;
 import ${package_dto}.${Table}AddDTO;
 import ${package_dto}.${Table}UpdateDTO;
 import ${package_dto}.${Table}QueryDTO;
@@ -85,7 +85,7 @@ public class ${Table}RpcImpl implements ${Table}Rpc{
      * @param id
      * @return
      */
-    public ${Table}BO findById(${keyType} id){
+    public ${Table}VO findById(${keyType} id){
         return ${table}Service.findById(id);
     }
 

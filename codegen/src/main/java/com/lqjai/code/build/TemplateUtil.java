@@ -46,7 +46,7 @@ public class TemplateUtil {
         dataModel.put("package_controller",TemplateBuilder.PACKAGE_CONTROLLER);
         dataModel.put("package_pojo",TemplateBuilder.PACKAGE_POJO);
         dataModel.put("package_dto",TemplateBuilder.PACKAGE_DTO);
-        dataModel.put("package_bo",TemplateBuilder.PACKAGE_BO);
+        dataModel.put("package_vo",TemplateBuilder.PACKAGE_VO);
         dataModel.put("package_mapper",TemplateBuilder.PACKAGE_MAPPER);
         dataModel.put("package_mapper_xml",TemplateBuilder.PACKAGE_MAPPER_XML);
         dataModel.put("package_convert",TemplateBuilder.PACKAGE_CONVERT);

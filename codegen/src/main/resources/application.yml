@@ -4,8 +4,8 @@ utilsPackage: com.lqjai.common.utils
 pojoPackage: com.lqjai.cropscan.pojo
 # 接收前端传递参数的DTO
 dtoPackage: com.lqjai.cropscan.model.dto
-# 返回给前端的BO
-boPackage: com.lqjai.cropscan.model.bo
+# 返回给前端的VO
+voPackage: com.lqjai.cropscan.model.vo
 # MyBatis-Plus Mapper
 mapperPackage: com.lqjai.cropscan.mapper
 # MyBatis-Plus xml文件
@@ -20,7 +20,7 @@ rpcInterfacePackage: com.lqjai.cropscan.rpc
 rpcInterfaceImplPackage: com.lqjai.cropscan.rpc.impl
 # SpringCloud微服务Feign
 feignPackage: com.lqjai.cropscan.feign
-# DTO,BO和POJO相互转化工具类
+# DTO,VO和POJO相互转化工具类
 convertPackage: com.lqjai.cropscan.convert
 # 启用Swagger接口文档
 enableSwagger: true

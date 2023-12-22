@@ -32,7 +32,7 @@ public class TemplateBuilder {
     public static String PACKAGE_DTO;
 
     //modelPackage
-    public static String PACKAGE_BO;
+    public static String PACKAGE_VO;
 
     //mapperPackage
     public static String PACKAGE_MAPPER;
@@ -93,7 +93,7 @@ public class TemplateBuilder {
             PACKAGE_UTILS = props.getProperty("utilsPackage");
             PACKAGE_POJO = props.getProperty("pojoPackage");
             PACKAGE_DTO = props.getProperty("dtoPackage");
-            PACKAGE_BO = props.getProperty("boPackage");
+            PACKAGE_VO = props.getProperty("voPackage");
             PACKAGE_MAPPER = props.getProperty("mapperPackage");
             PACKAGE_MAPPER_XML = props.getProperty("mapperXmlPackage");
             PACKAGE_CONVERT = props.getProperty("convertPackage");
@@ -265,12 +265,12 @@ public class TemplateBuilder {
             }
             //如果被引用字段是主键，则为一对一关系，否则为一对多
             if(pkColumn.equals(tpk)){
-                map.put("pTableBO",pTable+"BO");
+                map.put("pTableVO",pTable+"VO");
                 map.put("pTable",pTable);
                 map.put("ftable",ftable);
                 map.put("isPK", true);
             }else {
-                map.put("pTableBO",String.format("List<%s>",pTable+"BO"));
+                map.put("pTableVO",String.format("List<%s>",pTable+"VO"));
                 map.put("pTable",String.format("List<%s>",pTable));
                 map.put("ftable",ftable+"List");
                 showList = true;
@@ -314,7 +314,7 @@ public class TemplateBuilder {
         DtoBuilder.builder(modelMap,"AddDTO.java");
         DtoBuilder.builder(modelMap,"QueryDTO.java");
         DtoBuilder.builder(modelMap,"UpdateDTO.java");
-        BoBuilder.builder(modelMap);
+        VoBuilder.builder(modelMap);
 
         //创建Controller
         ControllerBuilder.builder(modelMap);

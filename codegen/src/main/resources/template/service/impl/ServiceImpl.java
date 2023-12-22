@@ -2,7 +2,7 @@ package ${package_service_impl};
 
 import ${package_mapper}.${Table}Mapper;
 import ${package_pojo}.${Table};
-import ${package_bo}.${Table}BO;
+import ${package_vo}.${Table}VO;
 import ${package_dto}.${Table}AddDTO;
 import ${package_dto}.${Table}QueryDTO;
 import ${package_dto}.${Table}UpdateDTO;
@@ -98,14 +98,14 @@ public class ${Table}ServiceImpl extends ServiceImpl<${Table}Mapper, ${Table}> i
      * @return
      */
     @Override
-    public ${Table}BO findById(${keyType} id) {
+    public ${Table}VO findById(${keyType} id) {
     <#if !foreigns?has_content>
         ${Table} ${table} = getById(id);
     <#else>
         ${Table} ${table} = getBaseMapper().selectCascadeById(id);
     </#if>
-        ${Table}BO ${table}BO = ${Table}Convert.INSTANCE.convert(${table});
-        return ${table}BO;
+        ${Table}VO ${table}VO = ${Table}Convert.INSTANCE.convert(${table});
+        return ${table}VO;
     }
 
     /**

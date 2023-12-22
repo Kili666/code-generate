@@ -4,10 +4,10 @@ import java.util.Map;
 
 /****
  * @Author 千千科技
- * @Description BO构建
+ * @Description VO构建
  * @Date 2022/01/08 19:13
  *****/
-public class BoBuilder {
+public class VoBuilder {
 
 
     /***
@@ -18,9 +18,9 @@ public class BoBuilder {
         //生成Pojo层文件
         BuilderFactory.builder(dataModel,
                 "/template/model",
-                "BO.java",
-                TemplateBuilder.PACKAGE_BO,
-                "BO.java");
+                "VO.java",
+                TemplateBuilder.PACKAGE_VO,
+                "VO.java");
     }
 
     /***
@@ -31,8 +31,8 @@ public class BoBuilder {
         //生成Pojo层文件
         BuilderFactory.builder(dataModel,
                 "/template/model",
-                "BO.java",
-                TemplateBuilder.PACKAGE_BO,
+                "VO.java",
+                TemplateBuilder.PACKAGE_VO,
                 suffix);
     }
 

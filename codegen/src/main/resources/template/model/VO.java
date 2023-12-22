@@ -1,4 +1,4 @@
-package ${package_bo};
+package ${package_vo};
 <#if swagger==true>
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -6,8 +6,8 @@ import io.swagger.annotations.ApiModelProperty;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-import lombok.experimental.Accessors;
 import java.io.Serializable;
+import lombok.experimental.Accessors;
 <#if showList==true>
 import java.util.List;
 </#if>
@@ -29,11 +29,11 @@ import com.baomidou.mybatisplus.annotation.TableLogic;
  * @Date ${create_time}
  **/
 <#if swagger==true>
-@ApiModel(description = "${tableComment!""}",value = "${Table}BO")
+@ApiModel(description = "${tableComment!""}",value = "${Table}VO")
 </#if>
 @Data
 @Accessors(chain = true)
-public class ${Table}BO implements Serializable{
+public class ${Table}VO implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 <#list models as model>
@@ -47,7 +47,7 @@ public class ${Table}BO implements Serializable{
 	<#if swagger==true>
 	@ApiModelProperty(value = "${foreign.tableRemarks!""}")
 	</#if>
-	private ${foreign.pTableBO} ${foreign.ftable}; <#if foreign.tableRemarks?has_content>//${foreign.tableRemarks}</#if>
+	private ${foreign.pTableVO} ${foreign.ftable}; <#if foreign.tableRemarks?has_content>//${foreign.tableRemarks}</#if>
 
 </#list>
 }

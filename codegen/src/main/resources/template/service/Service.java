@@ -1,7 +1,7 @@
 package ${package_service};
 
 import ${package_pojo}.${Table};
-import ${package_bo}.${Table}BO;
+import ${package_vo}.${Table}VO;
 import ${package_dto}.${Table}AddDTO;
 import ${package_dto}.${Table}QueryDTO;
 import ${package_dto}.${Table}UpdateDTO;
@@ -33,7 +33,7 @@ public interface ${Table}Service extends IService<${Table}> {
 
     Boolean updateById(${Table}UpdateDTO ${table}UpdateDTO);
 
-    ${Table}BO findById(${keyType} id);
+    ${Table}VO findById(${keyType} id);
 
     Boolean updateBatchByIds(${Table}UpdateDTO ${table}UpdateDTO);
 

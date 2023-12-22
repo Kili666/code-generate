@@ -1,6 +1,6 @@
 package ${package_convert};
 
-import ${package_bo}.${Table}BO;
+import ${package_vo}.${Table}VO;
 import ${package_dto}.${Table}AddDTO;
 import ${package_dto}.${Table}QueryDTO;
 import ${package_dto}.${Table}UpdateDTO;
@@ -27,7 +27,7 @@ public interface ${Table}Convert {
 
     ${Table} convert(${Table}UpdateDTO ${table}UpdateDTO);
 
-    ${Table}BO convert(${Table} ${table});
+    ${Table}VO convert(${Table} ${table});
 
-    List<${Table}BO> convert(List<${Table}> ${table}List);
+    List<${Table}VO> convert(List<${Table}> ${table}List);
 }
